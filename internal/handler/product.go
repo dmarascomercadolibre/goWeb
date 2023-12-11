@@ -62,7 +62,8 @@ func (p *DefaultProducts) CreateProduct() gin.HandlerFunc {
 	}
 }
 
-// function that create a list of products an return it as a JSON response.
+// CreateProducts is a handler function that creates products.
+// It adds the products to the internal database and returns the updated database as a response.
 func (p *DefaultProducts) CreateProducts() gin.HandlerFunc {
 	return func(ctx *gin.Context) {
 
