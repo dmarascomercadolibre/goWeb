@@ -30,6 +30,9 @@ type BodyRequestCreate struct {
 	internal.AtributtesProduct
 }
 
+// CreateProduct is a handler function that creates a new product.
+// It expects an Authorization token in the request header.
+// If the token is invalid or the request body is invalid, appropriate error responses are sent.
 func (p *DefaultProducts) CreateProduct() gin.HandlerFunc {
 
 	return func(ctx *gin.Context) {
